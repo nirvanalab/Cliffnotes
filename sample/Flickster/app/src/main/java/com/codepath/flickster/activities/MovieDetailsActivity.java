@@ -3,9 +3,7 @@ package com.codepath.flickster.activities;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.codepath.flickster.R;
@@ -38,7 +36,7 @@ public class MovieDetailsActivity extends Activity {
     }
 
     private void initView() {
-        Picasso.with(this).load(movie.getBackdropPath()).into(ivBackdrop);
+        Picasso.with(this).load(movie.getBackdropImagePath()).into(ivBackdrop);
         tvTitle.setText(movie.getOriginalTitle());
     }
 }
