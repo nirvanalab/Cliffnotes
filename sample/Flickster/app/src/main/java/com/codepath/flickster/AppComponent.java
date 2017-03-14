@@ -1,13 +1,17 @@
 package com.codepath.flickster;
 
-import com.codepath.flickster.activities.MainActivity;
-
-import javax.inject.Singleton;
+import com.codepath.flickster.activities.MainActivitySubcomponent;
+import com.codepath.flickster.activities.MainPresenterModule;
 
 import dagger.Component;
 
-@Singleton
-@Component(modules = { AppModule.class })
+/**
+ * Created by JaneChung on 3/13/17.
+ */
+
+@ApplicationScope
+@Component(modules={AppModule.class})
 public interface AppComponent {
-    void inject(MainActivity activity);
+    void inject(Flickster flickster);
+    MainActivitySubcomponent mainActivitySubcomponent(MainPresenterModule module);
 }
