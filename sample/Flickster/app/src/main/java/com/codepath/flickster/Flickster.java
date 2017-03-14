@@ -2,14 +2,8 @@ package com.codepath.flickster;
 
 import android.app.Application;
 
-import com.codepath.flickster.networking.MovieRestClient;
-
-import javax.inject.Inject;
 
 public class Flickster extends Application implements ComponentProvider {
-
-    @Inject
-    protected MovieRestClient mMovieRestClient;
 
     private AppComponent mComponent;
 
